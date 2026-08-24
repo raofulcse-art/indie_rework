@@ -1,0 +1,28 @@
+name: Product or technical decision
+description: Track an unresolved question before implementation proceeds.
+title: "[Decision]: "
+labels: ["type: decision"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Decision required
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context and constraints
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: Options and trade-offs
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome
+      description: Complete after a decision is accepted and link the updated rule or ADR.

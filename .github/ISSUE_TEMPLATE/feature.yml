@@ -1,0 +1,42 @@
+name: Feature
+description: Define a product feature with traceable rules and acceptance criteria.
+title: "[Feature]: "
+labels: ["type: feature"]
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: Describe the user or business outcome.
+    validations:
+      required: true
+  - type: textarea
+    id: rules
+    attributes:
+      label: Business rules
+      description: List relevant IDs, for example BR-TEAM-001.
+      placeholder: "- BR-TEAM-001"
+    validations:
+      required: true
+  - type: textarea
+    id: criteria
+    attributes:
+      label: Acceptance criteria
+      placeholder: "- [ ] Given ..., when ..., then ..."
+    validations:
+      required: true
+  - type: textarea
+    id: questions
+    attributes:
+      label: Open questions and dependencies
+  - type: checkboxes
+    id: ready
+    attributes:
+      label: Ready checklist
+      options:
+        - label: Relevant business rules are accepted.
+          required: true
+        - label: Authorization behaviour is defined.
+          required: true
+        - label: Acceptance criteria are testable.
+          required: true
