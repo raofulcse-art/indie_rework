@@ -84,6 +84,14 @@ h1 strong { color: var(--lime); font-weight: inherit; }
 .auth-submit:focus-visible, .auth-link:focus-visible { outline: 2px solid var(--lime); outline-offset: 4px; }
 .auth-switch { margin: 25px 0 0; color: var(--muted); font-size: 13px; text-align: center; }
 .auth-footer { margin: 20px 0 0; color: #71837a; font-family: var(--display); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; }
+.verification-recipient { display: flex; align-items: center; gap: 13px; margin: 0 0 25px; padding: 13px; border: 1px solid rgba(156, 240, 31, 0.22); border-radius: 7px; background: rgba(156, 240, 31, 0.06); }
+.verification-icon { display: grid; place-items: center; flex: 0 0 34px; width: 34px; height: 34px; border-radius: 50%; color: var(--ink); background: var(--lime); font-family: var(--display); font-size: 19px; }
+.verification-recipient span:last-child { display: grid; gap: 3px; min-width: 0; }
+.verification-recipient small { color: var(--muted); font-size: 11px; }
+.verification-recipient strong { overflow-wrap: anywhere; color: var(--paper); font-size: 13px; font-weight: normal; }
+.verification-actions { display: grid; gap: 17px; }
+.verification-actions form:first-child { display: grid; }
+.verification-logout { width: 100%; padding: 0; border: 0; background: transparent; cursor: pointer; font-family: inherit; }
 
 @media (max-width: 640px) {
 	.site-header { padding: 8px 20px; }
@@ -103,4 +111,5 @@ h1 strong { color: var(--lime); font-weight: inherit; }
 	.auth-shell { padding: 25px 14px 20px; }
 	.auth-card { padding: 30px 22px 27px; }
 	.auth-heading h1 { font-size: 37px; }
+	.verification-recipient { align-items: flex-start; }
 }

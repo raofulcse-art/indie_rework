@@ -1,30 +1,36 @@
 <x-guest-layout>
-    <div class="mb-4 text-sm text-gray-600">
-        {{ __('Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn\'t receive the email, we will gladly send you another.') }}
+    <div class="auth-heading">
+        <p class="auth-kicker">One last step</p>
+        <h1>Check your inbox.</h1>
+        <p>{{ __('We sent a verification link to your email. Confirm it to unlock your TeamArena dashboard.') }}</p>
     </div>
 
     @if (session('status') == 'verification-link-sent')
-        <div class="mb-4 font-medium text-sm text-green-600">
-            {{ __('A new verification link has been sent to the email address you provided during registration.') }}
+        <div class="auth-status" role="status">
+            {{ __('A fresh verification link is on its way.') }}
         </div>
     @endif
 
-    <div class="mt-4 flex items-center justify-between">
+    <div class="verification-recipient">
+        <span class="verification-icon" aria-hidden="true">@</span>
+        <span>
+            <small>Verification email sent to</small>
+            <strong>{{ request()->user()->email }}</strong>
+        </span>
+    </div>
+
+    <div class="verification-actions">
         <form method="POST" action="{{ route('verification.send') }}">
             @csrf
 
-            <div>
-                <x-primary-button>
-                    {{ __('Resend Verification Email') }}
-                </x-primary-button>
-            </div>
+            <button type="submit" class="auth-submit">{{ __('Resend verification link') }}</button>
         </form>
 
         <form method="POST" action="{{ route('logout') }}">
             @csrf
 
-            <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                {{ __('Log Out') }}
+            <button type="submit" class="auth-link verification-logout">
+                {{ __('Use a different account') }}
             </button>
         </form>
     </div>
