@@ -10,6 +10,11 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     {{ __("You're logged in!") }}
+
+                    <p class="mt-2">
+                        <span class="font-medium">{{ __('Role(s):') }}</span>
+                        {{ auth()->user()->getRoleNames()->map(fn ($role) => ucfirst($role))->join(', ') }}
+                    </p>
                 </div>
             </div>
         </div>
