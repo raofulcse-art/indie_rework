@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="TeamArena is the home for amateur football teams, players, and matches.">
     <title>{{ config('app.name', 'TeamArena') }}</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/welcome.css', 'resources/js/app.js'])
 </head>
 <body class="landing-page">
     <header class="site-header">

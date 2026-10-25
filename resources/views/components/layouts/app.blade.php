@@ -7,7 +7,7 @@
 
         <title>{{ $title ?? config('app.name', 'TeamArena') }}</title>
 
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @vite(['resources/css/dashboard.css', 'resources/js/app.js'])
     </head>
     <body class="app-page">
         <div class="app-shell">
