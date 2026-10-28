@@ -10,7 +10,9 @@ database migrations, issues, and tests should trace back to the accepted rules h
 3. Consult the relevant file under `business-rules/` before implementing a feature.
 4. Consult `workflows/` for multi-step processes and state transitions.
 5. Record lasting technical choices under `decisions/`.
-6. Track implementation work with GitHub issues and the GitHub Project.
+6. Read [development decisions](descions.md) and [application flow](flow.md) when
+	tracing implementation intent or file-level behavior.
+7. Track implementation work with GitHub issues and the GitHub Project.
 
 ## Document status
 
